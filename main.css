@@ -1,41 +1,103 @@
 body {
+    color: rgb(108, 98, 145);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+
     background-color: aliceblue;
     margin: 0;
 }
 
 #main_div {
-    color: rgb(108, 98, 145);
     width: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #instagram_div {
     position: relative;
-    margin: auto;
     padding-top: 25px;
     width: 25%;
+    min-width: 350px;
+    margin: auto;
 }
 
 .centered_text {
     text-align: center;
 }
 
-#logo_banner {
+#header_tabs_inner_div {
+    width: fit-content;
+    margin: auto;
+}
+
+#header_tabs_div {
     position: sticky;
-    width: 100%;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: aliceblue;
+
     border-bottom-width: 5px;
     border-bottom-color:rgb(108, 98, 145);
     border-bottom-style: solid;
+    border-top-width: 5px;
+    border-top-color:rgb(108, 98, 145);
+    border-top-style: solid;
+
+    z-index: 10;
+}
+
+.tab {
+    color: inherit;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 40px;
+    border-width: 0px;
+
+    padding: 14px 40px 15px 40px;
+    margin: -6px;
+    width: 33%;
+}
+
+.tab:link {
+    text-decoration: none;
+}
+
+.tab:visited {
+    text-decoration: none;
+}
+
+.tab:active {
+    text-decoration: none;
+}
+
+.tab:hover {
+    text-decoration: none;
+    background-color: rgb(231, 238, 243);
+}
+
+#header_tabs {
+    width: 100%;
+}
+
+#logo_banner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-width: 1000px;
+    margin: auto;
+    margin-bottom: -6px;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 
 h1 {
-    color: rgb(108, 98, 145);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 40px;
 }
 
 p {
-    color: rgb(108, 98, 145);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 20px;
 }
