@@ -1,3 +1,4 @@
 Music4All site
 
-Work in progress :)
+Will use bootstrap sometime
+Music4All is an organization started by Anish Mehta
