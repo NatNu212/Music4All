@@ -1,0 +1,58 @@
+<link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+  crossorigin="anonymous"
+/>
+<link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  crossorigin="anonymous"
+/>
+
+<title>Music4All</title>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="/">Music4All</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#content"
+    aria-controls="content"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="content">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" id="homeLink" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="videosLink" href="/videos">Videos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="lessonsLink" href="/lessons">Lessons</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="eventsLink" href="/events">Events</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="teamLink" href="/team">Meet the Team</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="joinLink" href="/join">Work with us!</a>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    const path = window.location.pathname
+      .replace("index.html", "")
+      .replaceAll("/", "");
+    const id = path == "" ? "#homeLink" : "#" + path + "Link";
+    $(id).addClass("active");
+  </script>
+</nav>
