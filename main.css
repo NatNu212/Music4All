@@ -1,7 +1,105 @@
 :root {
-  --primary: purple;
+  --primary: #82bebb;
+  --secondary: #c1dfdb;
+  --background: #ffffff;
+}
+
+body {
+  background-color: var(--background);
 }
 
 .bg-primary {
   background-color: var(--primary) !important;
+}
+
+.banner {
+  width: 100%;
+  background-color: var(--secondary);
+  margin: 0;
+  padding: 0;
+}
+
+.full-size {
+  width: 100%;
+}
+.half-size {
+  display: block;
+  width: 69%;
+  margin: auto;
+}
+.center-align {
+  margin: auto;
+}
+
+.left-half {
+  margin-right: 55%;
+}
+.right-half {
+  margin-left: 55%;
+}
+
+.justify-text {
+  text-align: justify;
+}
+
+@media only screen and (max-width: 1000px) {
+  .sec-lg {
+    width: 0px;
+    height: 0px;
+    opacity: 0%;
+    margin: 0px;
+    padding: 0px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .sec-sm {
+    height: 0px;
+    opacity: 0%;
+  }
+}
+
+@keyframes fade-in-anim {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+.fade-in {
+  animation-name: fade-in-anim;
+}
+
+.anim-500ms {
+  animation-duration: 500ms;
+}
+
+.anim-1000ms {
+  animation-duration: 1000ms;
+}
+
+.anim-1500ms {
+  animation-duration: 1500ms;
+}
+
+.anim-2000ms {
+  animation-duration: 2000ms;
+}
+
+.anim-2500ms {
+  animation-duration: 2500ms;
+}
+
+.anim-3000ms {
+  animation-duration: 3000ms;
+}
+
+.anim-3500ms {
+  animation-duration: 3500ms;
+}
+
+.anim-instant {
+  animation-duration: 0ms;
 }
