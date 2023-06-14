@@ -2,10 +2,16 @@
   --primary: #82bebb;
   --secondary: #c1dfdb;
   --background: #ffffff;
+  --text: #000000;
 }
 
 body {
   background-color: var(--background);
+  overflow-x: hidden;
+}
+
+p {
+  color: var(--text);
 }
 
 .bg-primary {
@@ -15,6 +21,8 @@ body {
 .banner {
   width: 100%;
   background-color: var(--secondary);
+  overflow: hidden;
+  vertical-align: middle;
   margin: 0;
   padding: 0;
 }
@@ -29,6 +37,12 @@ body {
 }
 .center-align {
   margin: auto;
+}
+
+.normal-border {
+  border-color: var(--secondary);
+  border-width: 1px;
+  border-style: solid;
 }
 
 .left-half {
@@ -50,12 +64,19 @@ body {
     margin: 0px;
     padding: 0px;
   }
+  .banner {
+    width: 200%;
+    transform: translateX(-25%);
+  }
 }
 
 @media only screen and (min-width: 1000px) {
   .sec-sm {
+    width: 0px;
     height: 0px;
     opacity: 0%;
+    margin: 0px;
+    padding: 0px;
   }
 }
 
