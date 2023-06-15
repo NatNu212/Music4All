@@ -1,17 +1,23 @@
 :root {
   --primary: #82bebb;
   --secondary: #c1dfdb;
-  --background: #ffffff;
+  --background: rgb(255, 255, 255, 1);
   --text: #000000;
 }
 
 body {
   background-color: var(--background);
   overflow-x: hidden;
+  z-index: 1;
 }
 
 p {
   color: var(--text);
+}
+
+#content-main {
+  background-color: var(--background);
+  enable-background: new;
 }
 
 .bg-primary {
@@ -26,44 +32,29 @@ p {
   margin: 0;
   padding: 0;
 }
-
-.full-size {
-  width: 100%;
-}
-.half-size {
-  display: block;
-  width: 69%;
-  margin: auto;
-}
-.center-align {
-  margin: auto;
+.stay {
+  position: sticky !important;
+  top: 0px;
 }
 
-.normal-border {
-  border-color: var(--secondary);
-  border-width: 1px;
+.back {
+  z-index: -1;
+}
+
+.framed {
   border-style: solid;
+  border-color: #000000;
+  border-width: 2px;
+
+  width: 50%;
 }
 
-.left-half {
-  margin-right: 55%;
-}
-.right-half {
-  margin-left: 55%;
-}
-
-.justify-text {
-  text-align: justify;
+.sec {
+  margin: auto;
+  transform: translateX(25%);
 }
 
 @media only screen and (max-width: 1000px) {
-  .sec-lg {
-    width: 0px;
-    height: 0px;
-    opacity: 0%;
-    margin: 0px;
-    padding: 0px;
-  }
   .banner {
     width: 200%;
     transform: translateX(-25%);
@@ -71,13 +62,6 @@ p {
 }
 
 @media only screen and (min-width: 1000px) {
-  .sec-sm {
-    width: 0px;
-    height: 0px;
-    opacity: 0%;
-    margin: 0px;
-    padding: 0px;
-  }
 }
 
 @keyframes fade-in-anim {
