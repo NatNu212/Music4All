@@ -11,65 +11,38 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
     <script>
+      let was_lg = $(window).width() > 1000;
       $(document).ready(() => {
         $("header").load("/utility/templates/header.html");
+        if (was_lg) {
+          $("#ctt").load("/sec-lg.html");
+        } else {
+          $("#ctt").load("/sec-sm.html");
+        }
+      });
+      $(window).on("resize", () => {
+        const curr_lg = $(window).width() > 1000;
+        if (curr_lg && !was_lg) {
+          $("#ctt").empty();
+          $("#ctt").load("/sec-lg.html");
+        } else if (!curr_lg && was_lg) {
+          $("#ctt").empty();
+          $("#ctt").load("/sec-sm.html");
+        }
+        was_lg = curr_lg;
       });
     </script>
   </head>
   <body>
     <header></header>
-    <div class="flex">
+    <div class="flex stay back">
       <img
         class="banner fade-in anim-1000ms"
-        src="/utility/images/logo_banner.png"
+        src="/utility/images/logo_banner_chunky.png"
         alt=""
       />
     </div>
-    <div class="container sec-lg">
-      <div class="row my-3">
-        <div class="col">
-          <p class="justify-text">
-            Summary of what we do here. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Aliquet nec ullamcorper sit amet risus nullam
-            eget. Sed arcu non odio euismod lacinia at quis risus. Purus sit
-            amet luctus venenatis lectus magna fringilla urna. Eget mauris
-            pharetra et ultrices neque ornare aenean euismod. Odio ut enim
-            blandit volutpat maecenas volutpat blandit aliquam. Et tortor at
-            risus viverra adipiscing at in. Eleifend quam adipiscing vitae proin
-            sagittis nisl rhoncus mattis rhoncus. Tellus in hac habitasse platea
-            dictumst vestibulum rhoncus est. Posuere ac ut consequat semper.
-            Phasellus vestibulum lorem sed risus ultricies tristique nulla
-            aliquet.
-          </p>
-        </div>
-        <div class="col">
-          <img class="full-size" src="/utility/images/placeholder.png" alt="" />
-        </div>
-      </div>
-    </div>
-    <div class="container sec-sm">
-      <div class="container my-3 center-align">
-        <img
-          class="half-size normal-border"
-          src="/utility/images/placeholder.png"
-          alt=""
-        />
-        <p class="justify-text mt-2 mx-5">
-          Summary of what we do here. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Aliquet nec ullamcorper sit amet risus nullam eget. Sed
-          arcu non odio euismod lacinia at quis risus. Purus sit amet luctus
-          venenatis lectus magna fringilla urna. Eget mauris pharetra et
-          ultrices neque ornare aenean euismod. Odio ut enim blandit volutpat
-          maecenas volutpat blandit aliquam. Et tortor at risus viverra
-          adipiscing at in. Eleifend quam adipiscing vitae proin sagittis nisl
-          rhoncus mattis rhoncus. Tellus in hac habitasse platea dictumst
-          vestibulum rhoncus est. Posuere ac ut consequat semper. Phasellus
-          vestibulum lorem sed risus ultricies tristique nulla aliquet.
-        </p>
-      </div>
-    </div>
+    <div class="container" id="ctt"></div>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"

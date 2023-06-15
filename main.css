@@ -6,12 +6,17 @@
 }
 
 body {
-  background-color: var(--background);
+  background-color: var(--secondary);
   overflow-x: hidden;
+  z-index: 1;
 }
 
 p {
   color: var(--text);
+}
+
+.sec {
+  background-color: var(--background);
 }
 
 .bg-primary {
@@ -56,14 +61,15 @@ p {
   text-align: justify;
 }
 
+.stay {
+  position: sticky;
+  top: 0px;
+}
+.back {
+  z-index: -1;
+}
+
 @media only screen and (max-width: 1000px) {
-  .sec-lg {
-    width: 0px;
-    height: 0px;
-    opacity: 0%;
-    margin: 0px;
-    padding: 0px;
-  }
   .banner {
     width: 200%;
     transform: translateX(-25%);
@@ -71,12 +77,8 @@ p {
 }
 
 @media only screen and (min-width: 1000px) {
-  .sec-sm {
-    width: 0px;
-    height: 0px;
-    opacity: 0%;
-    margin: 0px;
-    padding: 0px;
+  .sec {
+    border: 2px solid var(--text);
   }
 }
 
