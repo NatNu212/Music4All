@@ -1,21 +1,51 @@
-<div class="p-5 m-5 center-align">
-  <a href="/work-in-progress">
+<script>
+  var first_timed = new Set();
+
+  $(".ci-txt").on("click", (e) => {
+    const txt = e.target;
+    const img = "#c" + txt.id;
+    if (first_timed.has(img)) {
+      $(img).toggleClass("anim-unblur");
+      $(txt).toggleClass("fade-out");
+    } else {
+      first_timed.add(img);
+      $(txt).removeClass("hidden");
+    }
+    $(img).toggleClass("anim-blur");
+    $(txt).toggleClass("fade-in");
+  });
+</script>
+
+<!-- WHEN ADDING SECS: REMEMBER TO CHANGE ID'S -->
+<div class="full-size center-align">
+  <div class="sec my-5">
     <img
-      class="banner normal-border"
+      class="c-img full-size normal-border anim-1000ms"
+      id="cti-1"
       src="/utility/images/placeholder.png"
       alt=""
     />
-  </a>
-  <p class="justify-text m-3" style="font-size: small">
-    Summary of what we do here. Lorem ipsum dolor sit amet, consectetur
-    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Aliquet nec ullamcorper sit amet risus nullam eget. Sed arcu non
-    odio euismod lacinia at quis risus. Purus sit amet luctus venenatis lectus
-    magna fringilla urna. Eget mauris pharetra et ultrices neque ornare aenean
-    euismod. Odio ut enim blandit volutpat maecenas volutpat blandit aliquam. Et
-    tortor at risus viverra adipiscing at in. Eleifend quam adipiscing vitae
-    proin sagittis nisl rhoncus mattis rhoncus. Tellus in hac habitasse platea
-    dictumst vestibulum rhoncus est. Posuere ac ut consequat semper. Phasellus
-    vestibulum lorem sed risus ultricies tristique nulla aliquet.
-  </p>
+    <div class="above-img-tc">
+      <p class="ci-txt justify-text anim-1000ms hidden" id="ti-1">
+        Summary of what we do here. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.
+      </p>
+    </div>
+  </div>
+  <div class="sec my-5">
+    <img
+      class="c-img full-size normal-border anim-1000ms"
+      id="cti-2"
+      src="/utility/images/placeholder.png"
+      alt=""
+    />
+    <div class="above-img-tc">
+      <p class="ci-txt justify-text anim-1000ms hidden" id="ti-2">
+        Another image and text here. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.
+      </p>
+    </div>
+  </div>
 </div>

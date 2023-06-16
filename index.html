@@ -20,6 +20,7 @@
           $("#ctt").load("/sec-sm.html");
         }
       });
+
       $(window).on("resize", () => {
         const curr_lg = $(window).width() > 1000;
         if (curr_lg && !was_lg) {

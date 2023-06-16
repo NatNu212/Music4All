@@ -3,6 +3,8 @@
   --secondary: #c1dfdb;
   --background: #ffffff;
   --text: #000000;
+
+  --font-size: 18px;
 }
 
 body {
@@ -15,8 +17,14 @@ p {
   color: var(--text);
 }
 
+#ctt {
+  font-size: var(--font-size);
+}
+
 .sec {
+  position: relative;
   background-color: var(--background);
+  border: 2px solid var(--text);
 }
 
 .bg-primary {
@@ -69,16 +77,30 @@ p {
   z-index: -1;
 }
 
+.above-img-tc {
+  z-index: 2 !important;
+  position: absolute;
+  padding: 15px;
+  padding-top: 5px;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media only screen and (max-width: 1000px) {
   .banner {
     width: 200%;
     transform: translateX(-25%);
   }
-}
 
-@media only screen and (min-width: 1000px) {
-  .sec {
-    border: 2px solid var(--text);
+  :root {
+    --font-size: 20px;
   }
 }
 
@@ -90,9 +112,50 @@ p {
     opacity: 100%;
   }
 }
+@keyframes fade-out-anim {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0%;
+  }
+}
+@keyframes blur-anim {
+  from {
+    filter: blur(0px);
+  }
+  to {
+    filter: blur(5px);
+  }
+}
+@keyframes unblur-anim {
+  from {
+    filter: blur(5px);
+  }
+  to {
+    filter: blur(0px);
+  }
+}
+
+.hidden {
+  opacity: 0%;
+}
 
 .fade-in {
   animation-name: fade-in-anim;
+  opacity: 100%;
+}
+.fade-out {
+  animation-name: fade-out-anim;
+  opacity: 0%;
+}
+.anim-blur {
+  animation-name: blur-anim;
+  filter: blur(5px);
+}
+.anim-unblur {
+  animation-name: unblur-anim;
+  filter: blur(0px);
 }
 
 .anim-500ms {
