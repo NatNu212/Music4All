@@ -25,6 +25,8 @@ p {
   position: relative;
   background-color: var(--background);
   border: 2px solid var(--text);
+  width: 95%;
+  margin: auto;
 }
 
 .bg-primary {
