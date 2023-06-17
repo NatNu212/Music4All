@@ -61,15 +61,6 @@
   </div>
 
   <script>
-    const path = window.location.pathname
-      .replace("index.html", "")
-      .replaceAll("/", "")
-      .replace("Music4All", "");
-    const id = path == "" ? "#homeLink" : "#" + path + "Link";
-    if (id != "#homeLink") {
-      console.log("hi");
-      $(".nav-item, .navbar-brand").addClass("anim-instant");
-    }
-    $(id).addClass("active");
+    header_setActiveTab();
   </script>
 </nav>
