@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --primary: #82bebb;
   --secondary: #c1dfdb;
@@ -8,6 +12,7 @@
 }
 
 body {
+  position: relative;
   background-color: var(--secondary);
   overflow-x: hidden;
   z-index: 1;
@@ -19,6 +24,20 @@ p {
 
 #ctt {
   font-size: var(--font-size);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+::-webkit-scrollbar-thumb {
+  opacity: 0%;
+  background: var(--primary);
 }
 
 .sec {
@@ -122,6 +141,15 @@ p {
     opacity: 0%;
   }
 }
+@keyframes fade-in-and-out-anim {
+  0%,
+  100% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 100%;
+  }
+}
 @keyframes blur-anim {
   from {
     filter: blur(0px);
@@ -142,6 +170,10 @@ p {
 .hidden {
   opacity: 0%;
 }
+.force-hidden {
+  opacity: 0% !important;
+  display: none !important;
+}
 
 .fade-in {
   animation-name: fade-in-anim;
@@ -150,6 +182,9 @@ p {
 .fade-out {
   animation-name: fade-out-anim;
   opacity: 0%;
+}
+.fade-in-and-out {
+  animation-name: fade-in-and-out-anim;
 }
 .anim-blur {
   animation-name: blur-anim;
@@ -190,4 +225,12 @@ p {
 
 .anim-instant {
   animation-duration: 0ms;
+}
+
+.anim-delay-3000ms {
+  animation-delay: 3000ms;
+}
+
+.anim-repeat {
+  animation-iteration-count: infinite;
 }

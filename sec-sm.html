@@ -2,8 +2,8 @@
   var first_timed = new Set();
 
   $(".ci-txt").on("click", (e) => {
-    const txt = e.target;
-    const img = "#c" + txt.id;
+    const txt = "#ti" + e.target.id;
+    const img = "#cti" + e.target.id;
     if (first_timed.has(img)) {
       $(img).toggleClass("anim-unblur");
       $(txt).toggleClass("fade-out");
@@ -21,12 +21,12 @@
   <div class="sec my-5">
     <img
       class="c-img full-size normal-border anim-1000ms"
-      id="cti-1"
+      id="ctih-1"
       src="/utility/images/placeholder.png"
       alt=""
     />
-    <div class="above-img-tc">
-      <p class="ci-txt justify-text anim-1000ms hidden" id="ti-1">
+    <div class="ci-txt above-img-tc" id="h-1">
+      <p class="justify-text anim-1000ms hidden" id="tih-1">
         Summary of what we do here. Lorem ipsum dolor sit amet, consectetur
         adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua.
@@ -37,12 +37,12 @@
   <div class="sec my-5">
     <img
       class="c-img full-size normal-border anim-1000ms"
-      id="cti-2"
+      id="ctih-2"
       src="/utility/images/placeholder.png"
       alt=""
     />
-    <div class="above-img-tc">
-      <p class="ci-txt justify-text anim-1000ms hidden" id="ti-2">
+    <div class="ci-txt above-img-tc" id="h-2">
+      <p class="justify-text anim-1000ms hidden" id="tih-2">
         Another image and text here. Lorem ipsum dolor sit amet, consectetur
         adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua.
