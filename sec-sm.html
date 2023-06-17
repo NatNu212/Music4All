@@ -2,6 +2,7 @@
   var first_timed = new Set();
 
   const toggle_classes = (txt, img) => {
+    console.log(txt);
     if (first_timed.has(img)) {
       $(img).toggleClass("anim-unblur");
       $(txt).toggleClass("fade-out");
@@ -14,14 +15,10 @@
   };
 
   $(".ci-txt").on("click", (e) => {
-    const txt = "#ti" + e.target.id;
-    const img = "#cti" + e.target.id;
-    toggle_classes(txt, img);
+    toggle_classes("#ti" + e.target.id, "#cti" + e.target.id);
   });
   $(".tci-txt").on("click", (e) => {
-    const txt = "#" + e.target.id;
-    const img = "#c" + e.target.id;
-    toggle_classes(txt, img);
+    toggle_classes("#" + e.target.id, "#c" + e.target.id);
   });
 </script>
 
