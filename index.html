@@ -22,7 +22,7 @@
       });
 
       $(window).on("resize", () => {
-        const curr_lg = $(window).width() > 1000;
+        var curr_lg = $(window).width() > 1000;
         if (curr_lg && !was_lg) {
           $("#ctt").empty();
           $("#ctt").load("/Music4All/sec-lg.html");

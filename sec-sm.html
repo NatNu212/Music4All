@@ -1,7 +1,7 @@
 <script>
   var first_timed = new Set();
 
-  const toggle_classes = (txt, img) => {
+  var toggle_classes = (txt, img) => {
     console.log(txt);
     if (first_timed.has(img)) {
       $(img).toggleClass("anim-unblur");
