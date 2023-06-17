@@ -19,7 +19,7 @@
     toggle_classes(txt, img);
   });
   $(".tci-txt").on("click", (e) => {
-    const txt = e.target.id;
+    const txt = "#" + e.target.id;
     const img = "#c" + e.target.id;
     toggle_classes(txt, img);
   });
