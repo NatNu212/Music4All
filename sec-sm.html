@@ -2,7 +2,6 @@
   var first_timed = new Set();
 
   var toggle_classes = (txt, img) => {
-    console.log(txt);
     if (first_timed.has(img)) {
       $(img).toggleClass("anim-unblur");
       $(txt).toggleClass("fade-out");
