@@ -13,11 +13,11 @@
     <script>
       let was_lg = $(window).width() > 1000;
       $(document).ready(() => {
-        $("header").load("/utility/templates/header.html");
+        $("header").load("/Music4All/utility/templates/header.html");
         if (was_lg) {
-          $("#ctt").load("/sec-lg.html");
+          $("#ctt").load("/Music4All/sec-lg.html");
         } else {
-          $("#ctt").load("/sec-sm.html");
+          $("#ctt").load("/Music4All/sec-sm.html");
         }
       });
 
@@ -25,10 +25,10 @@
         const curr_lg = $(window).width() > 1000;
         if (curr_lg && !was_lg) {
           $("#ctt").empty();
-          $("#ctt").load("/sec-lg.html");
+          $("#ctt").load("/Music4All/sec-lg.html");
         } else if (!curr_lg && was_lg) {
           $("#ctt").empty();
-          $("#ctt").load("/sec-sm.html");
+          $("#ctt").load("/Music4All/sec-sm.html");
         }
         was_lg = curr_lg;
       });
@@ -39,7 +39,7 @@
     <div class="flex stay back" id="banner-holder">
       <img
         class="banner fade-in anim-3500ms"
-        src="/utility/images/logo_banner_chunky.png"
+        src="/Music4All/utility/images/logo_banner_chunky.png"
         alt=""
       />
     </div>
@@ -55,6 +55,6 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="/Music4All/main.css" />
   </body>
 </html>

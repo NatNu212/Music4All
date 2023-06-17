@@ -17,7 +17,7 @@
     ><img
       class="d-block"
       height="36"
-      src="/utility/images/logo_iconish.png"
+      src="/Music4All/utility/images/logo_iconish.png"
       alt="Music4All"
   /></a>
   <button
@@ -34,22 +34,28 @@
   <div class="collapse navbar-collapse" id="content">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item fade-in anim-1000ms">
-        <a class="nav-link" id="homeLink" href="/">Home</a>
+        <a class="nav-link" id="homeLink" href="/Music4All/">Home</a>
       </li>
       <li class="nav-item fade-in anim-1500ms">
-        <a class="nav-link" id="videosLink" href="/videos">Videos</a>
+        <a class="nav-link" id="videosLink" href="/Music4All/videos">Videos</a>
       </li>
       <li class="nav-item fade-in anim-2000ms">
-        <a class="nav-link" id="lessonsLink" href="/lessons">Lessons</a>
+        <a class="nav-link" id="lessonsLink" href="/Music4All/lessons"
+          >Lessons</a
+        >
       </li>
       <li class="nav-item fade-in anim-2500ms">
-        <a class="nav-link" id="eventsLink" href="/events">Events</a>
+        <a class="nav-link" id="eventsLink" href="/Music4All/events">Events</a>
       </li>
       <li class="nav-item fade-in anim-3000ms">
-        <a class="nav-link" id="teamLink" href="/team">Meet the Team</a>
+        <a class="nav-link" id="teamLink" href="/Music4All/team"
+          >Meet the Team</a
+        >
       </li>
       <li class="nav-item fade-in anim-3500ms">
-        <a class="nav-link" id="joinLink" href="/join">Work with us!</a>
+        <a class="nav-link" id="joinLink" href="/Music4All/join"
+          >Work with us!</a
+        >
       </li>
     </ul>
   </div>
@@ -57,7 +63,8 @@
   <script>
     const path = window.location.pathname
       .replace("index.html", "")
-      .replaceAll("/", "");
+      .replaceAll("/", "")
+      .replace("Music4All", "");
     const id = path == "" ? "#homeLink" : "#" + path + "Link";
     if (id != "#homeLink") {
       console.log("hi");
