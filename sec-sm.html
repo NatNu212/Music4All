@@ -1,9 +1,7 @@
 <script>
   var first_timed = new Set();
 
-  $(".ci-txt").on("click", (e) => {
-    const txt = "#ti" + e.target.id;
-    const img = "#cti" + e.target.id;
+  const toggle_classes = (txt, img) => {
     if (first_timed.has(img)) {
       $(img).toggleClass("anim-unblur");
       $(txt).toggleClass("fade-out");
@@ -13,6 +11,17 @@
     }
     $(img).toggleClass("anim-blur");
     $(txt).toggleClass("fade-in");
+  };
+
+  $(".ci-txt").on("click", (e) => {
+    const txt = "#ti" + e.target.id;
+    const img = "#cti" + e.target.id;
+    toggle_classes(txt, img);
+  });
+  $(".tci-txt").on("click", (e) => {
+    const txt = e.target.id;
+    const img = "#c" + e.target.id;
+    toggle_classes(txt, img);
   });
 </script>
 
@@ -26,7 +35,7 @@
       alt=""
     />
     <div class="ci-txt above-img-tc" id="h-1">
-      <p class="justify-text anim-1000ms hidden" id="tih-1">
+      <p class="tci-txt justify-text anim-1000ms hidden" id="tih-1">
         Summary of what we do here. Lorem ipsum dolor sit amet, consectetur
         adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua.
@@ -42,7 +51,7 @@
       alt=""
     />
     <div class="ci-txt above-img-tc" id="h-2">
-      <p class="justify-text anim-1000ms hidden" id="tih-2">
+      <p class="tci-txt justify-text anim-1000ms hidden" id="tih-2">
         Another image and text here. Lorem ipsum dolor sit amet, consectetur
         adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua.
